@@ -113,28 +113,35 @@ const PROJECTS = [
 
 const EXPERIENCES = [
   {
-    role: "Web Development Committee Member",
-    org: "Student Organization — informatics engineering Dept.",
-    time: "2023 – Present",
-    desc: "Contributed to developing and maintaining the department's digital presence. Coordinated with design and content teams to ensure consistent, user-friendly information delivery.",
+    role: "Quality Assurance Engineer Intern",
+    org: "PT Permata Indo Sejahtera",
+    time: "july - september 2025",
+    desc: "Conducted manual testing for a web-based inventory management system, creating detailed test cases and reporting 20+ bugs that improved product stability before launch.",
+    images: [
+      "/img/permata1.jpeg",
+      "/img/permata2.jpeg",
+    ],
   },
   {
     role: "Freelance Website Developer",
     org: "Independent Clients",
     time: "2023",
-    desc: "Built and delivered WordPress-based landing pages for small local businesses. Managed client communication, requirements gathering, and post-launch support.",
+    desc: "Built and delivered WordPress-based landing pages for small local businesses...",
+    images: [],
   },
   {
     role: "Academic Project Lead",
     org: "University — Systems Analysis Course",
     time: "2023",
-    desc: "Led a team of 4 in designing a full system solution from requirements to prototype. Responsible for documentation, task coordination, and final presentation.",
+    desc: "Led a team of 4 in designing a full system solution...",
+    images: [],
   },
   {
     role: "Event Coordinator",
     org: "Faculty Tech Week Committee",
     time: "2022",
-    desc: "Organized logistics for a 3-day technology event. Coordinated with speakers, managed registration systems, and handled day-of operations for 200+ attendees.",
+    desc: "Organized logistics for a 3-day technology event...",
+    images: [],
   },
 ];
 
@@ -392,7 +399,7 @@ function Portfolio() {
           <div className="hero-visual" style={{ flex: "0 0 360px", position: "relative" }}>
             <div className="float-shape" style={{ width: 320, height: 380, borderRadius: "40% 60% 55% 45% / 50% 45% 55% 50%", background: "linear-gradient(135deg, #ede8f5 0%, #f8e8ed 50%, #e8edf8 100%)", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 30px 80px rgba(26,26,46,0.1)" }}>
               {
-              <img src="img/dhiyaa1.jpg" alt="Dhiyaa" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "40% 60% 55% 45% / 50% 45% 55% 50%" }} />
+              <img src="/img/dhiyaa1.jpg" alt="Dhiyaa" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "40% 60% 55% 45% / 50% 45% 55% 50%" }} />
               /* <div style={{ textAlign: "center", padding: 30 }}>
                 <div style={{ fontSize: "4rem", marginBottom: 12 }}>👩🏻‍💻</div>
                 <div style={{ fontFamily: "Lora, serif", fontSize: "0.95rem", color: "#4a4a6a", fontStyle: "italic", lineHeight: 1.6 }}>"Curious by nature,<br />precise by practice."</div>
@@ -427,9 +434,7 @@ function Portfolio() {
           <Reveal>
             <div className="about-grid" style={{ display: "flex", gap: 60, alignItems: "center" }}>
               <div style={{ flex: "0 0 260px" }}>
-                <div style={{ width: "100%", maxWidth: 260, aspectRatio: "4/5", borderRadius: 24, background: "linear-gradient(145deg, #e8e0f5, #f5e8ed)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "5rem", boxShadow: "0 20px 50px rgba(26,26,46,0.1)" }}>
-                  👩🏻‍🎓
-                </div>
+                <img src="img/dhiyaa2.png" alt="Dhiyaa" style={{ width: "100%", borderRadius: 20, border: "1px solid #ede8f5", boxShadow: "0 12px 30px rgba(26,26,46,0.08)" }} />
               </div>
               <div style={{ flex: 1 }}>
                 <p className="section-label">Get to know me</p>
@@ -549,6 +554,13 @@ function Portfolio() {
                         <span style={{ background: "#f5f2fa", border: "1px solid #e8e4f0", borderRadius: 99, padding: "4px 14px", fontSize: "0.75rem", fontWeight: 600, color: "#7a7a9a", whiteSpace: "nowrap" }}>{e.time}</span>
                       </div>
                       <p style={{ fontSize: "0.88rem", color: "#6b6b8d", lineHeight: 1.75, marginTop: 10 }}>{e.desc}</p>
+                      {e.images?.length > 0 && (
+                        <div style={{ display: "flex", gap: 10, marginTop: 16, flexWrap: "wrap" }}>
+                          {e.images.map((img, idx) => (
+                            <img key={idx} src={img} alt={`${e.role} screenshot ${idx + 1}`} style={{ width: 180, height: 120, objectFit: "cover", borderRadius: 10, border: "1px solid #ede8f5" }} />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
