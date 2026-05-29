@@ -110,8 +110,8 @@ const PROJECTS = [
 
 const EXPERIENCES = [
   {
-    role: "Quality Assurance Engineer Intern",
-    org: "Glints",
+    role: "Quality Assurance Engineer - Intern",
+    company: "Glints",
     time: "February - May 2026",
     desc: [
       "Conducted manual and basic automation testing on web and mobile application of Glints, including regression and end-to-end testing",
@@ -125,8 +125,8 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: "Quality Assurance Engineer Intern",
-    org: "PT Permata Indo Sejahtera",
+    role: "Quality Assurance Engineer - Intern",
+    company: "PT Permata Indo Sejahtera",
     time: "July - September 2025",
     desc: [
       "Developed and executed manual test cases for web and mobile application features based on documentation and Figma designs",
@@ -141,24 +141,46 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: "Freelance Website Developer",
-    org: "Independent Clients",
-    time: "2023",
+    role: "WordPress Developer Intern - Community Freelancer",
+    org: "ScaleUP UKM",
+    time: "july - november 2025",
     desc: [
-      "Built and delivered WordPress-based landing pages for small local businesses",
-      "Managed client communication, requirements gathering, and post-launch support",
+      "Assisted in managing and developing WordPress-based websites for digital business projects using Kadence WP",
+      "Supported website setup, customization, and project related adjustments based on client and project needs",
+      "Participated in weekly coordination meetings with project managers to monitor project and client progress",
+      "Contributed to project-based workflows supporting the digitalization of UMKM businesses in Indonesia",
+      "Developed simple custom WordPress plugin features using PHP when needed for project requirements"
     ],
     images: [],
   },
   {
-    role: "Academic Project Lead",
-    org: "University — Systems Analysis Course",
-    time: "2023",
+    role: "Coding Instructor - Part Time",
+    company: "The Maker Hacker - PT Ralta Kreatif Nusantara",
+    time: "september 2025 - januari 2026",
     desc: [
-      "Led a team of 4 in designing a full system solution from requirements to prototype",
-      "Responsible for documentation, task coordination, and final presentation",
+      "Guided more than 1 class within up to 5 students in creating simple animations and logic-based projects",
+      "Taught basic coding concepts to elementary students using Scratch and Code.org",
+      "Delivered interactive fun and engaging learning sessions in English to help students develop computational thinking and problem-solving skills",
+      "Guided students in creating simple animations and logic-based projects"
     ],
-    images: [],
+    images: [
+      "/img/ngajar1.jpeg",
+      "/img/ngajar2.jpeg",
+      "/img/ngajar3.jpeg",
+    ],
+    role: "Head of Secretariat - 2025 Junior National Wushu Championship",
+    company: "Kementerian Pemuda dan Olahraga RI (Ministry of Youth and Sports of the Republic of Indonesia)",
+    time: "November - Desember 2025",
+    desc: [
+      "led 8 people as team secretariat in organizing the 2025 Junior National Wushu Championship, a major national sports event with over 500 participants and 1000 spectators",
+      "Completed administrative operations with stong committee communications before - during - after the event to ensure smooth execution and coordination among divisions",
+      "Managed event documentation for internal and external use, including participant records, schedules, and official reports",
+    ],
+    images: [
+      "/img/wushu1.jpeg",
+      "/img/wushu2.jpeg",
+      "/img/wushu3.jpeg",
+    ],
   },
 ];
 
@@ -414,10 +436,10 @@ function Portfolio() {
                   I'm a final-year Informatics Engineering student with a growing fascination for what happens <em>between</em> when software is built and when it reaches the user which is exactly the space where QA Engineering lives. I believe quality isn't an afterthought; it's the detail that separates good products from great ones.
                 </p>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 18 }}>
-                  Alongside that, I'm drawn to data — the kind that tells honest stories about how people behave, what systems produce, and where things can be better. Data Analytics feels like a natural extension of how I already think: carefully, with curiosity and structure.
+                  Alongside that, I'm drawn to data the kind that tells honest stories about how people behave, what systems produce, and where things can be better. Data Analytics feels like a natural extension of how I already think: carefully, with curiosity and structure.
                 </p>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 32 }}>
-                  I'm actively working on my English communication skills because I genuinely want to collaborate in global environments — and because clear communication is itself a form of quality. I'm not just learning for a certificate; I'm learning to connect.
+                  I'm actively working on my English communication skills because I genuinely want to collaborate in global environments and because clear communication is itself a form of quality. I'm not just learning for a certificate; I'm learning to connect.
                 </p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
                   {["Informatics Engineering", "QA Engineering", "Data Analytics", "Global Mindset", "Web Development"].map(t => (
