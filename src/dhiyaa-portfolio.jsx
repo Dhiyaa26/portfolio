@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 
-// ── Scroll-reveal hook ──────────────────────────────────────────────
 function useReveal(threshold = 0.15) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -16,7 +15,6 @@ function useReveal(threshold = 0.15) {
   return [ref, visible];
 }
 
-// ── Tiny reusable revealed section ─────────────────────────────────
 function Reveal({ children, delay = 0, className = "" }) {
   const [ref, visible] = useReveal();
   return (
@@ -34,7 +32,6 @@ function Reveal({ children, delay = 0, className = "" }) {
   );
 }
 
-// ── Data ────────────────────────────────────────────────────────────
 const NAV_LINKS = ["About", "Skills", "Projects", "Experience", "Certifications", "Contact"];
 
 const SKILLS = [
@@ -46,7 +43,7 @@ const SKILLS = [
   {
     cat: "Data Analytics",
     icon: "📊",
-    items: ['SQL basic'],
+    items: ["SQL Basic"],
   },
   {
     cat: "Development",
@@ -114,9 +111,30 @@ const PROJECTS = [
 const EXPERIENCES = [
   {
     role: "Quality Assurance Engineer Intern",
+    org: "Glints",
+    time: "February - May 2026",
+    desc: [
+      "Conducted manual and basic automation testing on web and mobile application of Glints, including regression and end-to-end testing",
+      "Created and executed test cases based on product requirement documents, user stories, and use cases, resulting in the identification and reporting of 20+ bugs that improved product stability before launch",
+      "Identified, documented, and tracked bugs using JIRA across staging and production environments",
+      "Assisted in preparing and supporting bug bash and UAT sessions, collaborating with cross-functional teams to ensure comprehensive test coverage and timely issue resolution",
+    ],
+    images: [
+      "/img/glints1.jpeg",
+      "/img/glints2.jpeg",
+    ],
+  },
+  {
+    role: "Quality Assurance Engineer Intern",
     org: "PT Permata Indo Sejahtera",
-    time: "july - september 2025",
-    desc: "Conducted manual testing for a web-based inventory management system, creating detailed test cases and reporting 20+ bugs that improved product stability before launch.",
+    time: "July - September 2025",
+    desc: [
+      "Developed and executed manual test cases for web and mobile application features based on documentation and Figma designs",
+      "Conducted functional testing during sprint cycles to identify bugs and ensure feature quality",
+      "Utilized Qase.io for structured test case management, including test steps, preconditions, actual results, and supporting evidence",
+      "Collaborated within agile scrum workflows alongside QA, developers, UI/UX designers, and project teams during product discussions and feature reviews",
+      "Assisted in reporting testing results and tracking issues using project management tools such as Plaky",
+    ],
     images: [
       "/img/permata1.jpeg",
       "/img/permata2.jpeg",
@@ -126,21 +144,20 @@ const EXPERIENCES = [
     role: "Freelance Website Developer",
     org: "Independent Clients",
     time: "2023",
-    desc: "Built and delivered WordPress-based landing pages for small local businesses...",
+    desc: [
+      "Built and delivered WordPress-based landing pages for small local businesses",
+      "Managed client communication, requirements gathering, and post-launch support",
+    ],
     images: [],
   },
   {
     role: "Academic Project Lead",
     org: "University — Systems Analysis Course",
     time: "2023",
-    desc: "Led a team of 4 in designing a full system solution...",
-    images: [],
-  },
-  {
-    role: "Event Coordinator",
-    org: "Faculty Tech Week Committee",
-    time: "2022",
-    desc: "Organized logistics for a 3-day technology event...",
+    desc: [
+      "Led a team of 4 in designing a full system solution from requirements to prototype",
+      "Responsible for documentation, task coordination, and final presentation",
+    ],
     images: [],
   },
 ];
@@ -154,7 +171,6 @@ const CERTS = [
   { name: "API Testing Fundamentals", provider: "Postman", status: "Upcoming", icon: "🔌" },
 ];
 
-// ── Component ───────────────────────────────────────────────────────
 function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -189,114 +205,77 @@ function Portfolio() {
         ::-webkit-scrollbar-thumb { background: #c9b8d4; border-radius: 99px; }
 
         .nav-link {
-          color: #4a4a6a;
-          text-decoration: none;
-          font-size: 0.85rem;
-          font-weight: 500;
-          letter-spacing: 0.03em;
-          padding: 6px 14px;
-          border-radius: 99px;
-          transition: all 0.2s;
-          cursor: pointer;
+          color: #4a4a6a; text-decoration: none; font-size: 0.85rem; font-weight: 500;
+          letter-spacing: 0.03em; padding: 6px 14px; border-radius: 99px;
+          transition: all 0.2s; cursor: pointer;
         }
         .nav-link:hover { background: #ede8f5; color: #1a1a2e; }
 
         .btn-primary {
           display: inline-flex; align-items: center; gap: 7px;
-          background: #1a1a2e; color: #f8f7f5;
-          border: none; padding: 12px 26px;
-          border-radius: 99px; font-family: 'Outfit', sans-serif;
-          font-size: 0.9rem; font-weight: 600; cursor: pointer;
-          transition: all 0.25s; letter-spacing: 0.02em;
+          background: #1a1a2e; color: #f8f7f5; border: none; padding: 12px 26px;
+          border-radius: 99px; font-family: 'Outfit', sans-serif; font-size: 0.9rem;
+          font-weight: 600; cursor: pointer; transition: all 0.25s; letter-spacing: 0.02em;
           text-decoration: none;
         }
         .btn-primary:hover { background: #2d2d5e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,26,46,0.18); }
 
         .btn-outline {
           display: inline-flex; align-items: center; gap: 7px;
-          background: transparent; color: #1a1a2e;
-          border: 1.5px solid #c5bfd8; padding: 11px 24px;
-          border-radius: 99px; font-family: 'Outfit', sans-serif;
-          font-size: 0.9rem; font-weight: 600; cursor: pointer;
-          transition: all 0.25s; letter-spacing: 0.02em;
-          text-decoration: none;
+          background: transparent; color: #1a1a2e; border: 1.5px solid #c5bfd8;
+          padding: 11px 24px; border-radius: 99px; font-family: 'Outfit', sans-serif;
+          font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.25s;
+          letter-spacing: 0.02em; text-decoration: none;
         }
         .btn-outline:hover { border-color: #1a1a2e; background: #f0eeea; transform: translateY(-2px); }
 
         .skill-pill {
-          background: white;
-          border: 1px solid #e8e4f0;
-          border-radius: 8px;
-          padding: 8px 14px;
-          font-size: 0.82rem;
-          font-weight: 500;
-          color: #3d3d60;
-          transition: all 0.2s;
-          cursor: default;
+          background: white; border: 1px solid #e8e4f0; border-radius: 8px; padding: 8px 14px;
+          font-size: 0.82rem; font-weight: 500; color: #3d3d60; transition: all 0.2s; cursor: default;
         }
         .skill-pill:hover { background: #ede8f5; border-color: #c9b8d4; transform: translateY(-1px); }
 
         .project-card {
-          background: white;
-          border: 1px solid #ede8f5;
-          border-radius: 18px;
-          padding: 28px;
-          transition: all 0.3s;
-          cursor: pointer;
+          background: white; border: 1px solid #ede8f5; border-radius: 18px; padding: 28px;
+          transition: all 0.3s; cursor: pointer;
         }
         .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(26,26,46,0.1); border-color: #c9b8d4; }
 
         .filter-btn {
-          padding: 7px 20px;
-          border-radius: 99px;
-          border: 1.5px solid #e0dce8;
-          background: white;
-          font-family: 'Outfit', sans-serif;
-          font-size: 0.82rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.2s;
-          color: #4a4a6a;
+          padding: 7px 20px; border-radius: 99px; border: 1.5px solid #e0dce8; background: white;
+          font-family: 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 600; cursor: pointer;
+          transition: all 0.2s; color: #4a4a6a;
         }
         .filter-btn:hover { border-color: #c9b8d4; background: #f5f2fa; }
         .filter-btn.active { background: #1a1a2e; color: white; border-color: #1a1a2e; }
 
         .timeline-dot {
-          width: 12px; height: 12px;
-          border-radius: 50%;
-          background: #e8b4c0;
-          border: 2.5px solid white;
-          box-shadow: 0 0 0 3px #e8b4c0;
-          flex-shrink: 0;
-          margin-top: 5px;
+          width: 12px; height: 12px; border-radius: 50%; background: #e8b4c0;
+          border: 2.5px solid white; box-shadow: 0 0 0 3px #e8b4c0;
+          flex-shrink: 0; margin-top: 5px;
         }
 
         .cert-card {
-          background: white;
-          border: 1px solid #ede8f5;
-          border-radius: 14px;
-          padding: 20px;
-          display: flex; align-items: center; gap: 14px;
-          transition: all 0.2s;
+          background: white; border: 1px solid #ede8f5; border-radius: 14px; padding: 20px;
+          display: flex; align-items: center; gap: 14px; transition: all 0.2s;
         }
         .cert-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(26,26,46,0.08); }
 
         .section-label {
-          font-size: 0.75rem;
-          font-weight: 700;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          color: #9b8fb0;
-          margin-bottom: 10px;
+          font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+          color: #9b8fb0; margin-bottom: 10px;
+        }
+        .section-title {
+          font-family: 'Lora', serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+          font-weight: 600; color: #1a1a2e; line-height: 1.25;
         }
 
-        .section-title {
-          font-family: 'Lora', serif;
-          font-size: clamp(1.7rem, 3.5vw, 2.4rem);
-          font-weight: 600;
-          color: #1a1a2e;
-          line-height: 1.25;
+        .exp-img {
+          width: 110px; height: 80px; object-fit: cover; border-radius: 10px;
+          border: 1px solid #ede8f5; cursor: pointer;
+          transition: transform 0.2s, box-shadow 0.2s;
         }
+        .exp-img:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(26,26,46,0.15); }
 
         .hamburger { display: none; }
         @media (max-width: 768px) {
@@ -359,7 +338,6 @@ function Portfolio() {
 
       {/* ── HERO ── */}
       <section id="hero" style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "100px clamp(20px,5vw,80px) 60px", overflow: "hidden", position: "relative" }}>
-        {/* Background blobs */}
         <div style={{ position: "absolute", top: "10%", right: "8%", width: 340, height: 340, borderRadius: "50%", background: "radial-gradient(circle, rgba(232,180,192,0.22) 0%, transparent 70%)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", bottom: "15%", left: "3%", width: 260, height: 260, borderRadius: "50%", background: "radial-gradient(circle, rgba(180,200,232,0.18) 0%, transparent 70%)", pointerEvents: "none" }} />
 
@@ -384,7 +362,6 @@ function Portfolio() {
               <button className="btn-primary" onClick={() => scrollTo("Projects")}>View Projects →</button>
               <button className="btn-outline">Download CV ↓</button>
             </div>
-
             <div className="hero-anim-4" style={{ display: "flex", gap: 28, marginTop: 48, paddingTop: 32, borderTop: "1px solid #ede8f5" }}>
               {[["6+", "Projects"], ["4+", "Experiences"], ["2", "Focus Areas"]].map(([n, l]) => (
                 <div key={l}>
@@ -395,17 +372,10 @@ function Portfolio() {
             </div>
           </div>
 
-          {/* Hero visual */}
           <div className="hero-visual" style={{ flex: "0 0 360px", position: "relative" }}>
-            <div className="float-shape" style={{ width: 320, height: 380, borderRadius: "40% 60% 55% 45% / 50% 45% 55% 50%", background: "linear-gradient(135deg, #ede8f5 0%, #f8e8ed 50%, #e8edf8 100%)", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 30px 80px rgba(26,26,46,0.1)" }}>
-              {
-              <img src="/img/dhiyaa1.jpg" alt="Dhiyaa" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "40% 60% 55% 45% / 50% 45% 55% 50%" }} />
-              /* <div style={{ textAlign: "center", padding: 30 }}>
-                <div style={{ fontSize: "4rem", marginBottom: 12 }}>👩🏻‍💻</div>
-                <div style={{ fontFamily: "Lora, serif", fontSize: "0.95rem", color: "#4a4a6a", fontStyle: "italic", lineHeight: 1.6 }}>"Curious by nature,<br />precise by practice."</div>
-              </div> */}
+            <div className="float-shape" style={{ width: 320, height: 380, borderRadius: "40% 60% 55% 45% / 50% 45% 55% 50%", overflow: "hidden", boxShadow: "0 30px 80px rgba(26,26,46,0.1)" }}>
+              <img src="/img/dhiyaa1.jpg" alt="Dhiyaa" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
-            {/* Floating badges */}
             {[
               { icon: "🔍", label: "QA Testing", top: -10, left: -30, delay: "0s" },
               { icon: "📊", label: "Data Analytics", bottom: 40, right: -35, delay: "1.5s" },
@@ -413,8 +383,7 @@ function Portfolio() {
             ].map(({ icon, label, top, bottom, left, right, delay }) => (
               <div key={label} style={{
                 position: "absolute", top, bottom, left, right,
-                background: "white", border: "1px solid #ede8f5",
-                borderRadius: 12, padding: "8px 14px",
+                background: "white", border: "1px solid #ede8f5", borderRadius: 12, padding: "8px 14px",
                 display: "flex", alignItems: "center", gap: 7,
                 fontSize: "0.75rem", fontWeight: 600, color: "#3d3d60",
                 boxShadow: "0 8px 24px rgba(26,26,46,0.1)",
@@ -434,22 +403,24 @@ function Portfolio() {
           <Reveal>
             <div className="about-grid" style={{ display: "flex", gap: 60, alignItems: "center" }}>
               <div style={{ flex: "0 0 260px" }}>
-                <img src="img/dhiyaa2.png" alt="Dhiyaa" style={{ width: "100%", borderRadius: 20, border: "1px solid #ede8f5", boxShadow: "0 12px 30px rgba(26,26,46,0.08)" }} />
+                <div style={{ width: "100%", maxWidth: 260, aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", boxShadow: "0 20px 50px rgba(26,26,46,0.1)" }}>
+                  <img src="/img/dhiyaa2.png" alt="Dhiyaa" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                </div>
               </div>
               <div style={{ flex: 1 }}>
                 <p className="section-label">Get to know me</p>
                 <h2 className="section-title" style={{ marginBottom: 24 }}>A student building toward<br /><em>something meaningful.</em></h2>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 18 }}>
-                  I'm a final-year Informatics Engineering student and currently on 6 semester. With a growing fascination for what happens <em>between</em> when software is built and when it reaches the user which is exactly the space where QA Engineering lives. I believe quality isn't an afterthought, it's the detail that separates good products from great ones.
+                  I'm a final-year Informatics Engineering student with a growing fascination for what happens <em>between</em> when software is built and when it reaches the user which is exactly the space where QA Engineering lives. I believe quality isn't an afterthought; it's the detail that separates good products from great ones.
                 </p>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 18 }}>
-                  Alongside that, I'm drawn to data, the kind that tells honest stories about how people behave, what systems produce, and where things can be better. Data Analytics feels like a natural extension of how I already think: carefully, with curiosity and structure.
+                  Alongside that, I'm drawn to data — the kind that tells honest stories about how people behave, what systems produce, and where things can be better. Data Analytics feels like a natural extension of how I already think: carefully, with curiosity and structure.
                 </p>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 32 }}>
                   I'm actively working on my English communication skills because I genuinely want to collaborate in global environments — and because clear communication is itself a form of quality. I'm not just learning for a certificate; I'm learning to connect.
                 </p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                  {["informatics engineering", "QA Engineering", "Data Analytics", "Global Mindset", "Web Development"].map(t => (
+                  {["Informatics Engineering", "QA Engineering", "Data Analytics", "Global Mindset", "Web Development"].map(t => (
                     <span key={t} style={{ background: "white", border: "1px solid #dcd8ec", borderRadius: 8, padding: "7px 14px", fontSize: "0.8rem", fontWeight: 600, color: "#4a4a6a" }}>{t}</span>
                   ))}
                 </div>
@@ -538,11 +509,13 @@ function Portfolio() {
           </Reveal>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {EXPERIENCES.map((e, i) => (
-              <Reveal key={e.role} delay={i * 0.1}>
+              <Reveal key={e.role + e.org} delay={i * 0.1}>
                 <div style={{ display: "flex", gap: 24, paddingBottom: i < EXPERIENCES.length - 1 ? 40 : 0 }}>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                     <div className="timeline-dot" />
-                    {i < EXPERIENCES.length - 1 && <div style={{ width: 1.5, flex: 1, background: "linear-gradient(to bottom, #e8b4c0, #e8e4f0)", marginTop: 8 }} />}
+                    {i < EXPERIENCES.length - 1 && (
+                      <div style={{ width: 1.5, flex: 1, background: "linear-gradient(to bottom, #e8b4c0, #e8e4f0)", marginTop: 8 }} />
+                    )}
                   </div>
                   <div style={{ flex: 1, paddingTop: 0 }}>
                     <div style={{ background: "white", border: "1px solid #ede8f5", borderRadius: 16, padding: "24px 26px" }}>
@@ -553,11 +526,19 @@ function Portfolio() {
                         </div>
                         <span style={{ background: "#f5f2fa", border: "1px solid #e8e4f0", borderRadius: 99, padding: "4px 14px", fontSize: "0.75rem", fontWeight: 600, color: "#7a7a9a", whiteSpace: "nowrap" }}>{e.time}</span>
                       </div>
-                      <p style={{ fontSize: "0.88rem", color: "#6b6b8d", lineHeight: 1.75, marginTop: 10 }}>{e.desc}</p>
-                      {e.images?.length > 0 && (
+                      {Array.isArray(e.desc) ? (
+                        <ul style={{ marginTop: 10, paddingLeft: 18, display: "flex", flexDirection: "column", gap: 6 }}>
+                          {e.desc.map((point, j) => (
+                            <li key={j} style={{ fontSize: "0.88rem", color: "#6b6b8d", lineHeight: 1.7 }}>{point}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p style={{ fontSize: "0.88rem", color: "#6b6b8d", lineHeight: 1.75, marginTop: 10 }}>{e.desc}</p>
+                      )}
+                      {e.images && e.images.length > 0 && (
                         <div style={{ display: "flex", gap: 10, marginTop: 16, flexWrap: "wrap" }}>
-                          {e.images.map((img, idx) => (
-                            <img key={idx} src={img} alt={`${e.role} screenshot ${idx + 1}`} style={{ width: 180, height: 120, objectFit: "cover", borderRadius: 10, border: "1px solid #ede8f5" }} />
+                          {e.images.map((src, idx) => (
+                            <img key={idx} src={src} alt={`${e.role} documentation ${idx + 1}`} className="exp-img" />
                           ))}
                         </div>
                       )}
@@ -598,8 +579,6 @@ function Portfolio() {
               </Reveal>
             ))}
           </div>
-
-          {/* Currently learning strip */}
           <Reveal delay={0.3}>
             <div style={{ marginTop: 40, background: "linear-gradient(135deg, #1a1a2e, #2d2d5e)", borderRadius: 20, padding: "28px 32px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center" }}>
               <div>
@@ -653,5 +632,5 @@ function Portfolio() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 root.render(<Portfolio />);
