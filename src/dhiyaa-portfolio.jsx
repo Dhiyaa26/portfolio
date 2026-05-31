@@ -61,57 +61,97 @@ const PROJECTS = [
   {
     cat: "QA",
     catColor: "#e8b4c0",
-    title: "E-Commerce Website Testing",
-    summary: "Comprehensive manual testing of a student e-commerce project, identifying 14 functional bugs and UX issues across checkout and product listing flows.",
-    tools: ["Test Cases", "Bug Reports", "SDLC", "Manual Testing"],
-    icon: "🛒",
-  },
-  {
-    cat: "QA",
-    catColor: "#e8b4c0",
-    title: "Website Usability Review",
-    summary: "Heuristic evaluation and usability testing report for a university information portal. Documented pain points and proposed design improvements.",
-    tools: ["Heuristic Evaluation", "Usability Testing", "Documentation"],
-    icon: "🧪",
-  },
-  {
-    cat: "Data",
-    catColor: "#b4c8e8",
-    title: "Student Performance Dashboard",
-    summary: "Analyzed academic performance data using Excel and SQL. Built an interactive dashboard visualizing GPA trends, attendance correlation, and subject distributions.",
-    tools: ["Excel", "SQL", "Data Visualization"],
-    icon: "📈",
-  },
-  {
-    cat: "Data",
-    catColor: "#b4c8e8",
-    title: "Sales Data Exploration",
-    summary: "Explored a retail sales dataset to uncover seasonal trends, top-performing products, and regional patterns. Presented findings with clear visual storytelling.",
-    tools: ["Excel", "SQL", "Charts", "Analysis"],
-    icon: "🔢",
+    title: "Automated Testing — Tere Liye's Book Collection",
+    summary: "Performed automated testing on a book management system to verify features, page displays, validations, and role-based access across all pages.",
+    tools: ["Automated Testing", "Selenium", "Test Cases", "Performance Testing"],
+    icon: "🤖",
+    github: "",
+    liveUrl: "",
+    description: "Performed automated testing to ensure the website's features, page displays, validations, and role-based access worked correctly — confirming that all pages, including book collections and genres, functioned seamlessly without errors.",
+    goals: [
+      "Make sure each key feature works as needed.",
+      "Verify that the user interface performs well and is responsive across different devices and screen sizes.",
+      "Test the response time and stability of the app when handling multiple users or high load.",
+      "Validate role-based access control so users and admins see the correct permissions and restrictions.",
+    ],
   },
   {
     cat: "Dev",
     catColor: "#b4e8c8",
-    title: "Bakery Website",
-    summary: "Designed and built a responsive bakery website with product catalog, contact form, and CMS integration using WordPress and custom CSS theming.",
-    tools: ["WordPress", "HTML", "CSS", "PHP"],
-    icon: "🍞",
+    title: "Agency Website — MD Entertainment",
+    summary: "A responsive web development project built with Bootstrap and jQuery for academic purposes, featuring four main pages with a focus on visual presentation and mobile-to-desktop responsiveness.",
+    tools: ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "GitHub"],
+    icon: "🎬",
+    github: "",
+    liveUrl: "",
+    description: "MD Entertainment agency website is a responsive web development (RWD) project created for academic purposes, with a focus on visual presentation and mobile-to-desktop responsiveness. The project was built using Bootstrap and jQuery, and consists of four main pages: Home, About, Idols, and Contact. Developed the Home and Contact pages, implemented Navbar and Footer with consistent layout and responsiveness, and collaborated using GitHub for version control and code integration.",
+    goals: [
+      "Design a visually appealing and modern website layout.",
+      "Implement responsive design for both desktop and mobile devices.",
+      "Practice effective team collaboration and division of tasks.",
+      "Apply front-end frameworks (Bootstrap & jQuery) in a real-world context.",
+      "Strengthen version control workflow using Git & GitHub.",
+      "Enhance interactivity and user experience through dynamic elements.",
+    ],
   },
   {
     cat: "Dev",
     catColor: "#b4e8c8",
-    title: "Book Collection Web App",
-    summary: "Full-stack web application to manage a personal book collection with CRUD operations, search filtering, and MySQL database backend.",
-    tools: ["PHP", "MySQL", "JavaScript", "XAMPP"],
+    title: "Budget Tracker — Firebase Web App",
+    summary: "A personal finance web app to record, manage, and monitor income and expenses with bar/pie chart visualizations, Firebase authentication, and real-time database.",
+    tools: ["HTML5", "CSS3", "JavaScript", "Firebase", "Chart.js", "Bootstrap", "Netlify"],
+    icon: "💰",
+    github: "",
+    liveUrl: "https://budget-tracker-app-6019.netlify.app",
+    description: "Personal Budget Tracker is a web application that allows users to record, manage, and monitor their income and expenses efficiently. It provides data visualization through bar and pie charts, along with filtering and search features to help users analyze their personal finances more effectively. Note: the profile setting feature has not been upgraded yet due to Firebase storage billing requirements.",
+    goals: [
+      "Help users manage their personal finances more clearly and effectively.",
+      "Provide an easy-to-read transaction display and informative visualizations.",
+      "Enhance user experience with features like authentication, profile management, and data analytics.",
+      "Integrate a free and secure backend using Firebase for real-time functionality and portfolio deployment.",
+    ],
+  },
+  {
+    cat: "Dev",
+    catColor: "#b4e8c8",
+    title: "D'Mart Market App — UI/UX Prototype",
+    summary: "A high-fidelity Figma prototype of an online marketplace app for groceries and daily needs, with a focus on smooth user flow, intuitive checkout, and mobile-first design.",
+    tools: ["Figma", "UI/UX Design", "Prototyping", "User Flow"],
+    icon: "🛍️",
+    github: "",
+    liveUrl: "",
+    description: "D'Mart is a high-fidelity UI/UX design prototype of an online marketplace app created in Figma. The app is designed to help users shop for groceries and daily needs at supermarkets from the comfort of their homes. With a user-friendly interface and smooth user flow, the design focuses on making the shopping process fast, simple, and intuitive. Contributed by designing the Splash Screen, Login & Register pages, and the full Checkout & Payment flow, while building the interactive prototype connecting all user flows.",
+    goals: [
+      "Design a clean and modern marketplace UI with consistent visual language.",
+      "Ensure responsive, mobile-first layout principles throughout the app.",
+      "Create a seamless checkout and product-browsing experience with minimal user friction.",
+      "Improve UI/UX design workflow and collaboration using Figma team features.",
+      "Provide a complete interactive prototype for usability demonstration.",
+    ],
+  },
+  {
+    cat: "Dev",
+    catColor: "#b4e8c8",
+    title: "Tere Liye's Book Collection",
+    summary: "A web app to manage and explore book collections by Indonesian author Tere Liye, with user auth, genre browsing, favorites, and admin controls.",
+    tools: ["JSF", "Java EE", "Hibernate ORM", "MySQL", "GlassFish"],
     icon: "📚",
+    github: "",
+    liveUrl: "",
+    description: "A simple web application designed to manage and explore book collections, particularly focused on works by Indonesian author Tere Liye. The system allows users to register, log in, browse books by genre, read book details, leave comments, and add books to favorites, while admins can add or delete books from the collection. The project emphasizes user interaction, data management, and basic CRUD operations through a clean and intuitive interface.",
+    goals: [
+      "To implement the fundamental concepts of web application development using Java, JSF, and Hibernate.",
+      "To provide a simple platform for book enthusiasts to browse and manage their favorite books.",
+      "To create a dynamic and database-connected website capable of handling user input and admin control.",
+      "To strengthen understanding of frontend–backend integration and database relationships.",
+    ],
   },
 ];
 
 const EXPERIENCES = [
   {
     role: "Quality Assurance Engineer - Intern",
-    company: "Glints",
+    org: "Glints",
     time: "February - May 2026",
     desc: [
       "Conducted manual and basic automation testing on web and mobile application of Glints, including regression and end-to-end testing",
@@ -126,7 +166,7 @@ const EXPERIENCES = [
   },
   {
     role: "Quality Assurance Engineer - Intern",
-    company: "PT Permata Indo Sejahtera",
+    org: "PT Permata Indo Sejahtera",
     time: "July - September 2025",
     desc: [
       "Developed and executed manual test cases for web and mobile application features based on documentation and Figma designs",
@@ -143,7 +183,7 @@ const EXPERIENCES = [
   {
     role: "WordPress Developer Intern - Community Freelancer",
     org: "ScaleUP UKM",
-    time: "july - november 2025",
+    time: "July - November 2025",
     desc: [
       "Assisted in managing and developing WordPress-based websites for digital business projects using Kadence WP",
       "Supported website setup, customization, and project related adjustments based on client and project needs",
@@ -155,8 +195,8 @@ const EXPERIENCES = [
   },
   {
     role: "Coding Instructor - Part Time",
-    company: "The Maker Hacker - PT Ralta Kreatif Nusantara",
-    time: "september 2025 - januari 2026",
+    org: "The Maker Hacker - PT Ralta Kreatif Nusantara",
+    time: "September 2025 - January 2026",
     desc: [
       "Guided more than 1 class within up to 5 students in creating simple animations and logic-based projects",
       "Taught basic coding concepts to elementary students using Scratch and Code.org",
@@ -168,12 +208,14 @@ const EXPERIENCES = [
       "/img/ngajar2.jpeg",
       "/img/ngajar3.jpeg",
     ],
+  },
+  {
     role: "Head of Secretariat - 2025 Junior National Wushu Championship",
-    company: "Kementerian Pemuda dan Olahraga RI (Ministry of Youth and Sports of the Republic of Indonesia)",
-    time: "November - Desember 2025",
+    org: "Kementerian Pemuda dan Olahraga RI (Ministry of Youth and Sports of the Republic of Indonesia)",
+    time: "November - December 2025",
     desc: [
       "led 8 people as team secretariat in organizing the 2025 Junior National Wushu Championship, a major national sports event with over 500 participants and 1000 spectators",
-      "Completed administrative operations with stong committee communications before - during - after the event to ensure smooth execution and coordination among divisions",
+      "Completed administrative operations with strong committee communications before - during - after the event to ensure smooth execution and coordination among divisions",
       "Managed event documentation for internal and external use, including participant records, schedules, and official reports",
     ],
     images: [
@@ -197,6 +239,7 @@ function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null); 
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -433,7 +476,7 @@ function Portfolio() {
                 <p className="section-label">Get to know me</p>
                 <h2 className="section-title" style={{ marginBottom: 24 }}>A student building toward<br /><em>something meaningful.</em></h2>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 18 }}>
-                  I'm a final-year Informatics Engineering student with a growing fascination for what happens <em>between</em> when software is built and when it reaches the user which is exactly the space where QA Engineering lives. I believe quality isn't an afterthought; it's the detail that separates good products from great ones.
+                  I'm a sixth semester Informatics Engineering student with a growing fascination for what happens <em>between</em> when software is built and when it reaches the user which is exactly the space where QA Engineering lives. I believe quality isn't an afterthought; it's the detail that separates good products from great ones.
                 </p>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 18 }}>
                   Alongside that, I'm drawn to data the kind that tells honest stories about how people behave, what systems produce, and where things can be better. Data Analytics feels like a natural extension of how I already think: carefully, with curiosity and structure.
@@ -480,47 +523,143 @@ function Portfolio() {
       </section>
 
       {/* ── PROJECTS ── */}
-      <section id="projects" style={{ padding: "90px clamp(20px,5vw,80px)", background: "#f2eef8" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <Reveal>
-            <p className="section-label">Selected work</p>
-            <h2 className="section-title" style={{ marginBottom: 14 }}>Featured Projects</h2>
-            <p style={{ fontSize: "0.95rem", color: "#7a7a9a", marginBottom: 32 }}>Each project is approached as a case study — with purpose, process, and learning.</p>
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 40 }}>
-              {["All", "QA", "Data", "Dev"].map(f => (
-                <button key={f} className={`filter-btn${activeFilter === f ? " active" : ""}`} onClick={() => setActiveFilter(f)}>
-                  {{ All: "All Projects", QA: "🔍 QA", Data: "📊 Data", Dev: "💻 Dev" }[f]}
-                </button>
+<section id="projects" style={{ padding: "90px clamp(20px,5vw,80px)", background: "#f2eef8" }}>
+  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+    <Reveal>
+      <p className="section-label">Selected work</p>
+      <h2 className="section-title" style={{ marginBottom: 14 }}>Featured Projects</h2>
+      <p style={{ fontSize: "0.95rem", color: "#7a7a9a", marginBottom: 32 }}>Each project is approached as a case study — with purpose, process, and learning.</p>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 40 }}>
+        {["All", "QA", "Data", "Dev"].map(f => (
+          <button key={f} className={`filter-btn${activeFilter === f ? " active" : ""}`} onClick={() => setActiveFilter(f)}>
+            {{ All: "All Projects", QA: "🔍 QA", Data: "📊 Data", Dev: "💻 Dev" }[f]}
+          </button>
+        ))}
+      </div>
+    </Reveal>
+    <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 20 }}>
+      {filteredProjects.map((p, i) => (
+        <Reveal key={p.title} delay={i * 0.07}>
+          <div className="project-card">
+            <div style={{ width: "100%", height: 140, borderRadius: 12, background: `linear-gradient(135deg, ${p.catColor}55, ${p.catColor}22)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem", marginBottom: 20 }}>
+              {p.icon}
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+              <span style={{ background: p.catColor + "55", color: "#3d3d60", borderRadius: 99, padding: "3px 12px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>{p.cat}</span>
+            </div>
+            <h3 style={{ fontFamily: "Lora, serif", fontSize: "1.1rem", fontWeight: 600, color: "#1a1a2e", marginBottom: 10, lineHeight: 1.3 }}>{p.title}</h3>
+            <p style={{ fontSize: "0.87rem", color: "#6b6b8d", lineHeight: 1.7, marginBottom: 18 }}>{p.summary}</p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 20 }}>
+              {p.tools.map(t => (
+                <span key={t} style={{ background: "#f5f2fa", border: "1px solid #e8e4f0", borderRadius: 6, padding: "3px 10px", fontSize: "0.75rem", fontWeight: 500, color: "#6b6b8d" }}>{t}</span>
               ))}
             </div>
-          </Reveal>
-          <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 20 }}>
-            {filteredProjects.map((p, i) => (
-              <Reveal key={p.title} delay={i * 0.07}>
-                <div className="project-card">
-                  <div style={{ width: "100%", height: 140, borderRadius: 12, background: `linear-gradient(135deg, ${p.catColor}55, ${p.catColor}22)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem", marginBottom: 20 }}>
-                    {p.icon}
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                    <span style={{ background: p.catColor + "55", color: "#3d3d60", borderRadius: 99, padding: "3px 12px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>{p.cat}</span>
-                  </div>
-                  <h3 style={{ fontFamily: "Lora, serif", fontSize: "1.1rem", fontWeight: 600, color: "#1a1a2e", marginBottom: 10, lineHeight: 1.3 }}>{p.title}</h3>
-                  <p style={{ fontSize: "0.87rem", color: "#6b6b8d", lineHeight: 1.7, marginBottom: 18 }}>{p.summary}</p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 20 }}>
-                    {p.tools.map(t => (
-                      <span key={t} style={{ background: "#f5f2fa", border: "1px solid #e8e4f0", borderRadius: 6, padding: "3px 10px", fontSize: "0.75rem", fontWeight: 500, color: "#6b6b8d" }}>{t}</span>
-                    ))}
-                  </div>
-                  <div style={{ display: "flex", gap: 10 }}>
-                    <button style={{ flex: 1, padding: "9px", background: "#1a1a2e", color: "white", border: "none", borderRadius: 10, fontSize: "0.8rem", fontWeight: 600, cursor: "pointer" }}>View Details</button>
-                    <button style={{ padding: "9px 14px", background: "white", color: "#4a4a6a", border: "1px solid #e8e4f0", borderRadius: 10, fontSize: "0.8rem", fontWeight: 600, cursor: "pointer" }}>GitHub ↗</button>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+            <div style={{ display: "flex", gap: 10 }}>
+              <button
+                onClick={() => setSelectedProject(p)}
+                style={{ flex: 1, padding: "9px", background: "#1a1a2e", color: "white", border: "none", borderRadius: 10, fontSize: "0.8rem", fontWeight: 600, cursor: "pointer" }}
+              >
+                View Details
+              </button>
+              {p.github ? (
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ padding: "9px 14px", background: "white", color: "#4a4a6a", border: "1px solid #e8e4f0", borderRadius: 10, fontSize: "0.8rem", fontWeight: 600, cursor: "pointer", textDecoration: "none", display: "inline-flex", alignItems: "center" }}
+                >
+                  GitHub ↗
+                </a>
+              ) : (
+                <button disabled style={{ padding: "9px 14px", background: "#f5f2fa", color: "#bbb", border: "1px solid #e8e4f0", borderRadius: 10, fontSize: "0.8rem", fontWeight: 600, cursor: "not-allowed" }}>
+                  Private
+                </button>
+              )}
+            </div>
           </div>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* ── PROJECT MODAL ── */}
+{selectedProject && (
+  <div
+    onClick={() => setSelectedProject(null)}
+    style={{ position: "fixed", inset: 0, background: "rgba(26,26,46,0.55)", backdropFilter: "blur(6px)", zIndex: 2000, display: "flex", alignItems: "center", justifyContent: "center", padding: "20px" }}
+  >
+    <div
+      onClick={e => e.stopPropagation()}
+      style={{ background: "white", borderRadius: 24, maxWidth: 680, width: "100%", maxHeight: "85vh", overflowY: "auto", padding: "40px", position: "relative", boxShadow: "0 40px 100px rgba(26,26,46,0.2)" }}
+    >
+      {/* Close button */}
+      <button
+        onClick={() => setSelectedProject(null)}
+        style={{ position: "absolute", top: 20, right: 20, width: 36, height: 36, borderRadius: "50%", border: "1px solid #ede8f5", background: "#f5f2fa", cursor: "pointer", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center", color: "#4a4a6a" }}
+      >
+        ✕
+      </button>
+
+      {/* Header */}
+      <div style={{ width: "100%", height: 120, borderRadius: 14, background: `linear-gradient(135deg, ${selectedProject.catColor}55, ${selectedProject.catColor}22)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem", marginBottom: 24 }}>
+        {selectedProject.icon}
+      </div>
+
+      <span style={{ background: selectedProject.catColor + "55", color: "#3d3d60", borderRadius: 99, padding: "3px 12px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>
+        {selectedProject.cat}
+      </span>
+
+      <h2 style={{ fontFamily: "Lora, serif", fontSize: "1.5rem", fontWeight: 600, color: "#1a1a2e", margin: "12px 0 16px", lineHeight: 1.3 }}>
+        {selectedProject.title}
+      </h2>
+
+      {/* Description */}
+      <p style={{ fontSize: "0.93rem", color: "#5a5a7a", lineHeight: 1.8, marginBottom: 28 }}>
+        {selectedProject.description || selectedProject.summary}
+      </p>
+
+      {/* Goals */}
+      {selectedProject.goals && selectedProject.goals.length > 0 && (
+        <div style={{ marginBottom: 28 }}>
+          <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9b8fb0", marginBottom: 14 }}>Project Goals</p>
+          <ul style={{ paddingLeft: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
+            {selectedProject.goals.map((g, i) => (
+              <li key={i} style={{ display: "flex", gap: 10, fontSize: "0.9rem", color: "#5a5a7a", lineHeight: 1.65 }}>
+                <span style={{ width: 20, height: 20, borderRadius: "50%", background: selectedProject.catColor + "55", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.65rem", fontWeight: 700, color: "#3d3d60", flexShrink: 0, marginTop: 2 }}>{i + 1}</span>
+                {g}
+              </li>
+            ))}
+          </ul>
         </div>
-      </section>
+      )}
+
+      {/* Tech Stack */}
+      <div style={{ marginBottom: 28 }}>
+        <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9b8fb0", marginBottom: 12 }}>Tech Stack</p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          {selectedProject.tools.map(t => (
+            <span key={t} style={{ background: "#f5f2fa", border: "1px solid #e8e4f0", borderRadius: 8, padding: "6px 14px", fontSize: "0.82rem", fontWeight: 600, color: "#4a4a6a" }}>{t}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* Action buttons */}
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+        {selectedProject.github && (
+          <a href={selectedProject.github} target="_blank" rel="noreferrer" style={{ flex: 1, minWidth: 140, padding: "11px", background: "#1a1a2e", color: "white", borderRadius: 12, fontSize: "0.88rem", fontWeight: 600, textAlign: "center", textDecoration: "none", display: "inline-block" }}>
+            🐙 View on GitHub
+          </a>
+        )}
+        {selectedProject.liveUrl && (
+          <a href={selectedProject.liveUrl} target="_blank" rel="noreferrer" style={{ flex: 1, minWidth: 140, padding: "11px", background: "white", color: "#1a1a2e", border: "1.5px solid #c5bfd8", borderRadius: 12, fontSize: "0.88rem", fontWeight: 600, textAlign: "center", textDecoration: "none", display: "inline-block" }}>
+            🌐 Live Demo ↗
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+)}
 
       {/* ── EXPERIENCE ── */}
       <section id="experience" style={{ padding: "90px clamp(20px,5vw,80px)" }}>
