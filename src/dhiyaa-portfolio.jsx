@@ -38,12 +38,12 @@ const SKILLS = [
   {
     cat: "QA Engineering",
     icon: "🔍",
-    items: ["Manual Testing", "Test Case Writing", "Bug Reporting", "SDLC Basics", "Attention to Detail", "Critical Thinking"],
+    items: ["Manual Testing", "Test Case Writing", "Bug Reporting", "SDLC", "Cypress & Playwright beginner", "Attention to Detail", "Critical Thinking"],
   },
   {
     cat: "Data Analytics",
     icon: "📊",
-    items: ["SQL Basic"],
+    items: ["SQL", "Data Management", "Analytical Thinking", "Spreadsheet", "Problem Solving"],
   },
   {
     cat: "Development",
@@ -53,7 +53,7 @@ const SKILLS = [
   {
     cat: "Tools",
     icon: "🛠",
-    items: ["GitHub", "Figma", "XAMPP", "NetBeans", "Eclipse"],
+    items: ["Git & Github", "Figma", "Visual Studio Code", "Postman", "JIRA", "Android Studio", "DBeaver"],
   },
 ];
 
@@ -63,11 +63,11 @@ const PROJECTS = [
     catColor: "#e8b4c0",
     title: "Automated Testing — Tere Liye's Book Collection",
     summary: "Performed automated testing on a book management system to verify features, page displays, validations, and role-based access across all pages.",
-    tools: ["Automated Testing", "Selenium", "Test Cases", "Performance Testing"],
-    icon: "🤖",
+    tools: ["Unit Testing", "Jacoco", "Junit", "Jmeter"],
+    image: "/img/Automated-tereliye.png",
     github: "",
     liveUrl: "",
-    description: "Performed automated testing to ensure the website's features, page displays, validations, and role-based access worked correctly — confirming that all pages, including book collections and genres, functioned seamlessly without errors.",
+    description: "Performed Unit testing on Java Server Faces (JSF) self project about library named Tere Liye's Book Collection to ensure the website's features, page displays, validations, and role-based access worked correctly — confirming that all pages, including book collections and genres, functioned seamlessly without errors.",
     goals: [
       "Make sure each key feature works as needed.",
       "Verify that the user interface performs well and is responsive across different devices and screen sizes.",
@@ -76,14 +76,46 @@ const PROJECTS = [
     ],
   },
   {
+    cat: "QA",
+    catColor: "#e8b4c0",
+    title: "Automated Testing — Glints Technical Test Project",
+    summary: "Performed automated testing using playwright on technical test project by glints",
+    tools: ["Git","Qase.io", "Playwright", "Test Case Writing", "Bug Reporting"],
+    icon: "🤖",
+    github: "https://github.com/Dhiyaa26/automated-glints",
+    liveUrl: "",
+    description: "Performed Basic automation using playwright to fulfill technical test by glints, capturing authentication and profile testing scnearios on candidate website staging environment, able to deliver the result to the senior and manager by interview user in english and be the part of glints internship",
+    goals: [
+      "Make sure every test cases works as needed and passed before the interview day",
+      "Verify every test cases can be run well, and can explain if there's any failed test cases.",
+      "Show the understanding both of manual and automation testing concepts and how to apply it in real world project",
+    ],
+  },
+  {
+    cat: "QA",
+    catColor: "#e8b4c0",
+    title: "Automated Testing — Simplidots Technical Test Project",
+    summary: "Performed manual and automated testing for movie website using cypress on technical test project by Simplidots",
+    tools: ["Git", "Cypress", "Test Case Writing", "Bug Reporting"],
+    icon: "🤖",
+    github: "https://github.com/Dhiyaa26/simplidots-qa-automation",
+    liveUrl: "",
+    description: "Performed Basic automation using cypress for movie website, capturing movie's favorite bookmarked feature on the website, able to write the test cases on gherkin format",
+    goals: [
+      "writing the script test cases on cypress and gherkin",
+      "writing manual test cases on github.",
+      "Show the understanding both of manual and automation testing concepts and how to apply it in real world project",
+    ],
+  },
+  {
     cat: "Dev",
     catColor: "#b4e8c8",
     title: "Agency Website — MD Entertainment",
     summary: "A responsive web development project built with Bootstrap and jQuery for academic purposes, featuring four main pages with a focus on visual presentation and mobile-to-desktop responsiveness.",
     tools: ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "GitHub"],
-    icon: "🎬",
-    github: "",
-    liveUrl: "",
+    image: "/img/agency-web.png",
+    github: "https://github.com/Dhiyaa26/Tere-Liye-s-Book-Collection",
+    liveUrl: "https://dhiyaa26.github.io/-Website-Agency/index.html",
     description: "MD Entertainment agency website is a responsive web development (RWD) project created for academic purposes, with a focus on visual presentation and mobile-to-desktop responsiveness. The project was built using Bootstrap and jQuery, and consists of four main pages: Home, About, Idols, and Contact. Developed the Home and Contact pages, implemented Navbar and Footer with consistent layout and responsiveness, and collaborated using GitHub for version control and code integration.",
     goals: [
       "Design a visually appealing and modern website layout.",
@@ -100,8 +132,8 @@ const PROJECTS = [
     title: "Budget Tracker — Firebase Web App",
     summary: "A personal finance web app to record, manage, and monitor income and expenses with bar/pie chart visualizations, Firebase authentication, and real-time database.",
     tools: ["HTML5", "CSS3", "JavaScript", "Firebase", "Chart.js", "Bootstrap", "Netlify"],
-    icon: "💰",
-    github: "",
+    image: "/img/budget-web.png",
+    github: "https://github.com/Dhiyaa26/budget-tracker",
     liveUrl: "https://budget-tracker-app-6019.netlify.app",
     description: "Personal Budget Tracker is a web application that allows users to record, manage, and monitor their income and expenses efficiently. It provides data visualization through bar and pie charts, along with filtering and search features to help users analyze their personal finances more effectively. Note: the profile setting feature has not been upgraded yet due to Firebase storage billing requirements.",
     goals: [
@@ -114,29 +146,11 @@ const PROJECTS = [
   {
     cat: "Dev",
     catColor: "#b4e8c8",
-    title: "D'Mart Market App — UI/UX Prototype",
-    summary: "A high-fidelity Figma prototype of an online marketplace app for groceries and daily needs, with a focus on smooth user flow, intuitive checkout, and mobile-first design.",
-    tools: ["Figma", "UI/UX Design", "Prototyping", "User Flow"],
-    icon: "🛍️",
-    github: "",
-    liveUrl: "",
-    description: "D'Mart is a high-fidelity UI/UX design prototype of an online marketplace app created in Figma. The app is designed to help users shop for groceries and daily needs at supermarkets from the comfort of their homes. With a user-friendly interface and smooth user flow, the design focuses on making the shopping process fast, simple, and intuitive. Contributed by designing the Splash Screen, Login & Register pages, and the full Checkout & Payment flow, while building the interactive prototype connecting all user flows.",
-    goals: [
-      "Design a clean and modern marketplace UI with consistent visual language.",
-      "Ensure responsive, mobile-first layout principles throughout the app.",
-      "Create a seamless checkout and product-browsing experience with minimal user friction.",
-      "Improve UI/UX design workflow and collaboration using Figma team features.",
-      "Provide a complete interactive prototype for usability demonstration.",
-    ],
-  },
-  {
-    cat: "Dev",
-    catColor: "#b4e8c8",
     title: "Tere Liye's Book Collection",
     summary: "A web app to manage and explore book collections by Indonesian author Tere Liye, with user auth, genre browsing, favorites, and admin controls.",
     tools: ["JSF", "Java EE", "Hibernate ORM", "MySQL", "GlassFish"],
-    icon: "📚",
-    github: "",
+    image: "/img/tereliye-web.png",
+    github: "https://github.com/Dhiyaa26/Tere-Liye-s-Book-Collection",
     liveUrl: "",
     description: "A simple web application designed to manage and explore book collections, particularly focused on works by Indonesian author Tere Liye. The system allows users to register, log in, browse books by genre, read book details, leave comments, and add books to favorites, while admins can add or delete books from the collection. The project emphasizes user interaction, data management, and basic CRUD operations through a clean and intuitive interface.",
     goals: [
@@ -227,12 +241,27 @@ const EXPERIENCES = [
 ];
 
 const CERTS = [
-  { name: "SQL for Data Analysis", provider: "Dicoding", status: "Completed", icon: "🗃️" },
-  { name: "Introduction to QA Testing", provider: "Udemy", status: "Completed", icon: "✅" },
-  { name: "Advanced Excel for Data Analytics", provider: "Coursera", status: "In Progress", icon: "📊" },
-  { name: "Power BI Fundamentals", provider: "Microsoft Learn", status: "In Progress", icon: "📉" },
-  { name: "TOEFL Preparation", provider: "Self-Directed", status: "Ongoing", icon: "🌐" },
-  { name: "API Testing Fundamentals", provider: "Postman", status: "Upcoming", icon: "🔌" },
+  {
+    name: "TOEFL EPT",
+    provider: "daily bahasa inggris licensed by PT DAILY CIPTA DWIPA",
+    status: "Completed",
+    icon: "✅",
+    image: "/img/toefl-cert.jpg",
+  },
+  {
+    name: "Internship Certification - Permata Indonesia Sejahtera",
+    provider: "PT Permata Indo Sejahtera",
+    status: "Completed",
+    icon: "✅",
+    image: "/img/magangpermata-cert.jpg",
+  },
+  {
+    name: "Professional Certification - CCIT FTUI",
+    provider: "Faculty of Engineering, University of Indonesia",
+    status: "Completed",
+    icon: "✅",
+    image: "/img/ccit-cert.jpeg",
+  },
 ];
 
 function Portfolio() {
@@ -335,6 +364,15 @@ function Portfolio() {
           font-weight: 600; color: #1a1a2e; line-height: 1.25;
         }
 
+        .project-img {
+          width: 100%; height: 140px; object-fit: cover; border-radius: 12px;
+          border: 1px solid #ede8f5; display: block;
+        }
+        .project-img-placeholder {
+          width: 100%; height: 140px; border-radius: 12px;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 3rem; margin-bottom: 20px;
+        }
         .exp-img {
           width: 110px; height: 80px; object-fit: cover; border-radius: 10px;
           border: 1px solid #ede8f5; cursor: pointer;
@@ -384,11 +422,6 @@ function Portfolio() {
             {NAV_LINKS.map(l => (
               <span key={l} className="nav-link" onClick={() => scrollTo(l)}>{l}</span>
             ))}
-          </div>
-          <a className="btn-primary desktop-nav" href="#" style={{ fontSize: "0.8rem", padding: "9px 20px", display: "inline-flex" }}>
-            Download CV ↓
-          </a>
-          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span /><span /><span />
           </div>
         </div>
@@ -425,7 +458,6 @@ function Portfolio() {
             </p>
             <div className="hero-anim-4" style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <button className="btn-primary" onClick={() => scrollTo("Projects")}>View Projects →</button>
-              <button className="btn-outline">Download CV ↓</button>
             </div>
             <div className="hero-anim-4" style={{ display: "flex", gap: 28, marginTop: 48, paddingTop: 32, borderTop: "1px solid #ede8f5" }}>
               {[["6+", "Projects"], ["4+", "Experiences"], ["2", "Focus Areas"]].map(([n, l]) => (
@@ -541,9 +573,13 @@ function Portfolio() {
       {filteredProjects.map((p, i) => (
         <Reveal key={p.title} delay={i * 0.07}>
           <div className="project-card">
-            <div style={{ width: "100%", height: 140, borderRadius: 12, background: `linear-gradient(135deg, ${p.catColor}55, ${p.catColor}22)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem", marginBottom: 20 }}>
-              {p.icon}
-            </div>
+            {p.image ? (
+              <img src={p.image} alt={p.title} className="project-img" />
+            ) : (
+              <div className="project-img-placeholder" style={{ background: `linear-gradient(135deg, ${p.catColor}55, ${p.catColor}22)` }}>
+                {p.icon}
+              </div>
+            )}
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
               <span style={{ background: p.catColor + "55", color: "#3d3d60", borderRadius: 99, padding: "3px 12px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>{p.cat}</span>
             </div>
@@ -602,9 +638,13 @@ function Portfolio() {
       </button>
 
       {/* Header */}
-      <div style={{ width: "100%", height: 120, borderRadius: 14, background: `linear-gradient(135deg, ${selectedProject.catColor}55, ${selectedProject.catColor}22)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem", marginBottom: 24 }}>
-        {selectedProject.icon}
-      </div>
+      {selectedProject.image ? (
+        <img src={selectedProject.image} alt={selectedProject.title} style={{ width: "100%", maxHeight: 220, borderRadius: 14, objectFit: "contain", background: "#f5f2fa", marginBottom: 24 }} />
+      ) : (
+        <div style={{ width: "100%", height: 120, borderRadius: 14, background: `linear-gradient(135deg, ${selectedProject.catColor}55, ${selectedProject.catColor}22)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem", marginBottom: 24 }}>
+          {selectedProject.icon}
+        </div>
+      )}
 
       <span style={{ background: selectedProject.catColor + "55", color: "#3d3d60", borderRadius: 99, padding: "3px 12px", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>
         {selectedProject.cat}
@@ -713,45 +753,82 @@ function Portfolio() {
       </section>
 
       {/* ── CERTIFICATIONS ── */}
-      <section id="certifications" style={{ padding: "90px clamp(20px,5vw,80px)", background: "#f2eef8" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <Reveal>
-            <p className="section-label">Always learning</p>
-            <h2 className="section-title" style={{ marginBottom: 12 }}>Certifications & Learning Journey</h2>
-            <p style={{ fontSize: "0.95rem", color: "#7a7a9a", marginBottom: 46 }}>Growth is intentional. Here's what I've been working toward.</p>
-          </Reveal>
-          <div className="certs-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
-            {CERTS.map((c, i) => (
-              <Reveal key={c.name} delay={i * 0.07}>
-                <div className="cert-card">
-                  <div style={{ width: 46, height: 46, borderRadius: 12, background: "linear-gradient(135deg, #ede8f5, #f5e8ed)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem", flexShrink: 0 }}>
-                    {c.icon}
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <p style={{ fontWeight: 700, fontSize: "0.88rem", color: "#1a1a2e", marginBottom: 3 }}>{c.name}</p>
-                    <p style={{ fontSize: "0.78rem", color: "#9b8fb0" }}>{c.provider}</p>
-                  </div>
-                  <span style={{
-                    padding: "4px 12px", borderRadius: 99, fontSize: "0.72rem", fontWeight: 700, flexShrink: 0,
-                    background: c.status === "Completed" ? "#d4f0d4" : c.status === "In Progress" ? "#fff3d4" : c.status === "Ongoing" ? "#d4e8f5" : "#f0ede8",
-                    color: c.status === "Completed" ? "#2d7a3d" : c.status === "In Progress" ? "#8a6200" : c.status === "Ongoing" ? "#1a5a8a" : "#6a5a4a",
-                  }}>{c.status}</span>
+<section id="certifications" style={{ padding: "90px clamp(20px,5vw,80px)", background: "#f2eef8" }}>
+  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+    <Reveal>
+      <p className="section-label">Always learning</p>
+      <h2 className="section-title" style={{ marginBottom: 12 }}>Certifications & Learning Journey</h2>
+      <p style={{ fontSize: "0.95rem", color: "#7a7a9a", marginBottom: 46 }}>Growth is intentional. Here's what I've been working toward.</p>
+    </Reveal>
+
+    {/* 3-column row */}
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+      {CERTS.map((c, i) => (
+        <Reveal key={c.name} delay={i * 0.1}>
+          <div style={{
+            background: "white", border: "1px solid #ede8f5", borderRadius: 18,
+            overflow: "hidden", transition: "all 0.3s",
+          }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = "translateY(-5px)";
+              e.currentTarget.style.boxShadow = "0 16px 40px rgba(26,26,46,0.1)";
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+          {/* Certificate image */}
+            <div style={{ width: "100%", height: 200, background: "#fafafa", display: "flex", alignItems: "center", justifyContent: "center", padding: "16px", position: "relative", borderBottom: "1px solid #ede8f5" }}>
+              {c.image ? (
+                <img
+                  src={c.image}
+                  alt={c.name}
+                  style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
+                />
+              ) : (
+                <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem" }}>
+                  {c.icon}
                 </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal delay={0.3}>
-            <div style={{ marginTop: 40, background: "linear-gradient(135deg, #1a1a2e, #2d2d5e)", borderRadius: 20, padding: "28px 32px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center" }}>
-              <div>
-                <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#e8b4c0", marginBottom: 6 }}>Currently Focused On</p>
-                <p style={{ fontFamily: "Lora, serif", fontSize: "1.1rem", color: "white", fontWeight: 600 }}>SQL Optimization · Power BI · API Testing · English Communication</p>
+              )}
+              {/* Status badge on top of image */}
+              <span style={{
+                position: "absolute", top: 12, right: 12,
+                padding: "4px 12px", borderRadius: 99, fontSize: "0.7rem", fontWeight: 700,
+                background: c.status === "Completed" ? "#d4f0d4" : c.status === "In Progress" ? "#fff3d4" : c.status === "Ongoing" ? "#d4e8f5" : "#f0ede8",
+                color: c.status === "Completed" ? "#2d7a3d" : c.status === "In Progress" ? "#8a6200" : c.status === "Ongoing" ? "#1a5a8a" : "#6a5a4a",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+              }}>
+                {c.status}
+              </span>
+            </div>
+
+            {/* Info below image */}
+            <div style={{ padding: "18px 20px", display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{ width: 38, height: 38, borderRadius: 10, background: "linear-gradient(135deg, #ede8f5, #f5e8ed)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", flexShrink: 0 }}>
+                {c.icon}
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <p style={{ fontWeight: 700, fontSize: "0.85rem", color: "#1a1a2e", marginBottom: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.name}</p>
+                <p style={{ fontSize: "0.75rem", color: "#9b8fb0" }}>{c.provider}</p>
               </div>
             </div>
-          </Reveal>
-        </div>
-      </section>
+          </div>
+        </Reveal>
+      ))}
+    </div>
 
-      {/* ── CONTACT ── */}
+    <Reveal delay={0.3}>
+      <div style={{ marginTop: 40, background: "linear-gradient(135deg, #1a1a2e, #2d2d5e)", borderRadius: 20, padding: "28px 32px" }}>
+        <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#e8b4c0", marginBottom: 6 }}>Currently Focused On</p>
+        <p style={{ fontFamily: "Lora, serif", fontSize: "1.1rem", color: "white", fontWeight: 600 }}>QA Automation · SQL Optimization · English Communication · New Opportunity</p>
+      </div>
+    </Reveal>
+  </div>
+</section>
+
+
+       {/* ── CONTACT ── */}
       <section id="contact" style={{ padding: "90px clamp(20px,5vw,80px)" }}>
         <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
           <Reveal>
@@ -760,20 +837,28 @@ function Portfolio() {
             <p style={{ fontSize: "0.97rem", color: "#6b6b8d", lineHeight: 1.8, marginBottom: 48 }}>
               Currently open to internship and entry-level opportunities in <strong>QA Engineering</strong> and <strong>Data Analytics</strong>. I'd love to connect with teams who value curiosity and careful thinking.
             </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center", marginBottom: 48 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
               {[
-                { label: "LinkedIn", icon: "💼", href: "#" },
-                { label: "GitHub", icon: "🐙", href: "#" },
-                { label: "Email", icon: "✉️", href: "mailto:dhiyaa@email.com" },
+                { label: "LinkedIn", icon: "💼", href: "https://www.linkedin.com/in/dhiyaa-ulhaq/" },
+                { label: "GitHub", icon: "🐙", href: "https://github.com/Dhiyaa26" },
+                { label: "Email", icon: "✉️", href: "https://mail.google.com/mail/?view=cm&fs=1&to=dhiyaaulhaq101@gmail.com" },
               ].map(l => (
-                <a key={l.label} href={l.href} className="btn-outline" style={{ gap: 10, textDecoration: "none" }}>
-                  <span>{l.icon}</span> {l.label}
-                </a>
+                <a
+              key={l.label}
+              href={l.href}
+              target={l.href.startsWith("http") ? "_blank" : undefined}
+              rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="btn-outline"
+              style={{ gap: 10, textDecoration: "none" }}
+               >
+              <span>{l.icon}</span> {l.label}
+            </a>
               ))}
             </div>
           </Reveal>
         </div>
       </section>
+ 
 
       {/* ── FOOTER ── */}
       <footer style={{ borderTop: "1px solid #ede8f5", padding: "24px clamp(20px,5vw,80px)", background: "#f8f7f5" }}>
