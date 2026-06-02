@@ -389,9 +389,21 @@ function Portfolio() {
           .hero-grid { flex-direction: column !important; }
           .hero-visual { display: none; }
           .about-grid { flex-direction: column !important; }
+          .about-grid > div:first-child { display: flex; justify-content: center; }
           .skills-grid { grid-template-columns: 1fr !important; }
           .projects-grid { grid-template-columns: 1fr !important; }
-          .certs-grid { grid-template-columns: 1fr !important; }
+          #certifications > div > div[style*="display: grid"] { grid-template-columns: 1fr !important; }
+          .exp-img { width: calc(50% - 5px) !important; height: auto !important; aspect-ratio: 11/8; }
+        }
+        @media (max-width: 420px) {
+          .hero-anim-4 { flex-direction: column; }
+          .hero-anim-4 .btn-primary,
+          .hero-anim-4 .btn-outline { width: 100%; justify-content: center; }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .hero-grid { gap: 30px !important; }
+          .hero-visual { flex: 0 0 280px !important; }
+          .float-shape { width: 250px !important; height: 310px !important; }
         }
         @media (min-width: 769px) { .mobile-menu { display: none !important; } }
 
