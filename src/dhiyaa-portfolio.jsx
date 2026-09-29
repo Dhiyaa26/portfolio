@@ -163,6 +163,21 @@ const PROJECTS = [
 ];
 
 const EXPERIENCES = [
+   {
+    role: "Quality Assurance Analysist - Project Based Contract",
+    org: "Client: PT Adira Dinamika Multi Finance Tbk (via PT IDstar Cipta Teknologi )",
+    time: "June - September 2026",
+    desc: [
+      "Led API test execution for a major system migration from an external platform to the internal Adira ecosystem",
+      "Guaranteed workflow alignment between legacy and target systems, preventing operational disruptions post-migration",
+      "Analyzed and benchmarked API request/response structures across legacy and updated systems to eliminate data discrepancies",
+      "Logged and communicated technical bugs via structured test reports to streamline fix cycles with developers"
+    ],
+    images: [
+      "/img/glints1.jpeg",
+      "/img/glints2.jpeg",
+    ],
+  },
   {
     role: "Quality Assurance Engineer - Intern",
     org: "Glints",
