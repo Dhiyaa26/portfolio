@@ -38,7 +38,7 @@ const SKILLS = [
   {
     cat: "QA Engineering",
     icon: "🔍",
-    items: ["Manual Testing", "Test Case Writing", "Bug Reporting", "SDLC", "Cypress & Playwright beginner", "Attention to Detail", "Critical Thinking"],
+    items: ["Manual Testing", "Basic Automation Testing", "Performance Testing" "Test Case Writing", "Bug Reporting", "SDLC", "Cypress & Playwright beginner", "Attention to Detail", "Critical Thinking"],
   },
   {
     cat: "Data Analytics",
@@ -478,7 +478,7 @@ function Portfolio() {
               <span style={{ color: "#e8b4c0" }}>.</span>
             </h1>
             <p className="hero-anim-2" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.35rem)", fontWeight: 500, color: "#6b6b8d", marginBottom: 20, letterSpacing: "-0.01em" }}>
-              Aspiring QA Engineer & Data Analyst
+              Aspiring QA Engineer
             </p>
             <p className="hero-anim-3" style={{ fontSize: "0.97rem", lineHeight: 1.75, color: "#5a5a7a", maxWidth: 460, marginBottom: 38 }}>
               Informatics Engineering student with a passion for software quality, data-driven thinking, and building digital experiences that actually work well. Curious, growth-oriented, and ready for global opportunities.
@@ -535,13 +535,18 @@ function Portfolio() {
                 <p className="section-label">Get to know me</p>
                 <h2 className="section-title" style={{ marginBottom: 24 }}>A student building toward<br /><em>something meaningful.</em></h2>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 18 }}>
-                  I'm a sixth semester Informatics Engineering student with a growing fascination for what happens <em>between</em> when software is built and when it reaches the user which is exactly the space where QA Engineering lives. I believe quality isn't an afterthought; it's the detail that separates good products from great ones.
+                  I'm a final-year Computer Science student currently in my seventh semester, with a growing interest in Quality Assurance and Software Testing. Through my internship and project-based experiences, I've had the opportunity to work with functional, regression, end-to-end, UAT, and API testing, and that's where I found myself enjoying the process of understanding how a system works, finding what could go wrong, and making sure things work the way they're supposed to.
                 </p>
+
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 18 }}>
-                  Alongside that, I'm drawn to data the kind that tells honest stories about how people behave, what systems produce, and where things can be better. Data Analytics feels like a natural extension of how I already think: carefully, with curiosity and structure.
+                  What I enjoy about QA is that it sits right between technology and people. It's not only about finding bugs, but also about asking the right questions, paying attention to details, understanding the user's perspective, and working together with developers, product teams, and other people to build something better. I genuinely enjoy collaborating with others, and I always try to bring a positive attitude, open communication, and a willingness to learn into every team I work with.
+                </p>
+
+                <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 18 }}>
+                  I'm also interested in growing into test automation. I'm still developing my programming skills and have a lot more to learn, but I'm excited by the challenge of becoming more technical and understanding how automation can make testing more efficient and reliable. I believe there's always something new to learn in technology, and I'm comfortable being a beginner at something as long as I'm willing to keep learning and improving.
                 </p>
                 <p style={{ fontSize: "0.97rem", lineHeight: 1.85, color: "#5a5a7a", marginBottom: 32 }}>
-                  I'm actively working on my English communication skills because I genuinely want to collaborate in global environments and because clear communication is itself a form of quality. I'm not just learning for a certificate; I'm learning to connect.
+                  At this stage of my journey, I'm looking for new opportunities where I can contribute, learn from experienced people, and challenge myself beyond what I already know. I'm eager to keep growing, meet new people, take on new challenges, and see where those opportunities can take me. I'm still figuring things out, but I'm excited about what comes next.
                 </p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
                   {["Informatics Engineering", "QA Engineering", "Data Analytics", "Global Mindset", "Web Development"].map(t => (
