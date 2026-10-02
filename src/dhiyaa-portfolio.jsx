@@ -38,7 +38,7 @@ const SKILLS = [
   {
     cat: "QA Engineering",
     icon: "🔍",
-    items: ["Manual Testing", "Basic Automation Testing", "Performance Testing" "Test Case Writing", "Bug Reporting", "SDLC", "Cypress & Playwright beginner", "Attention to Detail", "Critical Thinking"],
+    items: ["Manual Testing", "Basic Automation Testing", "Performance Testing", "Test Case Writing", "Bug Reporting", "SDLC", "Cypress & Playwright beginner", "Attention to Detail", "Critical Thinking"],
   },
   {
     cat: "Data Analytics",
@@ -528,7 +528,7 @@ function Portfolio() {
             <div className="about-grid" style={{ display: "flex", gap: 60, alignItems: "center" }}>
               <div style={{ flex: "0 0 260px" }}>
                 <div style={{ width: "100%", maxWidth: 260, aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", boxShadow: "0 20px 50px rgba(26,26,46,0.1)" }}>
-                  <img src="/img/dhiyaa2.png" alt="Dhiyaa" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <img src="/img/uak.JPG" alt="Dhiyaa" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                 </div>
               </div>
               <div style={{ flex: 1 }}>
@@ -896,7 +896,7 @@ function Portfolio() {
       <footer style={{ borderTop: "1px solid #ede8f5", padding: "24px clamp(20px,5vw,80px)", background: "#f8f7f5" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
           <span style={{ fontFamily: "Lora, serif", fontSize: "1rem", color: "#1a1a2e", fontWeight: 600 }}>Dhiyaa<span style={{ color: "#e8b4c0" }}>.</span></span>
-          <p style={{ fontSize: "0.8rem", color: "#9b8fb0" }}>Crafted with care · 2025</p>
+          <p style={{ fontSize: "0.8rem", color: "#9b8fb0" }}>Updated on · 2026</p>
           <div style={{ display: "flex", gap: 20 }}>
             {NAV_LINKS.map(l => (
               <span key={l} onClick={() => scrollTo(l)} style={{ fontSize: "0.78rem", color: "#9b8fb0", cursor: "pointer", transition: "color 0.2s" }}
